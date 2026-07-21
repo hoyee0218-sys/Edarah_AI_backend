@@ -4,11 +4,11 @@ import { config } from './config/env.js';
 import routes from './routes/index.js';
 import { errorHandler } from './utils/errors.js';
 import { connectDatabase } from './db/connect.js';
-import { seedDatabaseIfEmpty } from './db/seed.js';
+// import { seedDatabaseIfEmpty } from './db/seed.js';
 
 async function bootstrap() {
   await connectDatabase();
-  await seedDatabaseIfEmpty();
+  // await seedDatabaseIfEmpty();
 
   const app = express();
   app.use(cors({ origin: true, credentials: true }));
